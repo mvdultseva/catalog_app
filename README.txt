@@ -9,6 +9,7 @@ from the requirements.txt:
     1. Create virtual environment: python3 -m venv Catalog_app_venv
     2. Activate virtual environment: source catalog_app_venv/bin/activate
     3. Install all dependencies: pip install -r requirements.txt
+    4. You need to make changes to the files "client_secrets.json" and "fb_client_secrets.json", "login.html" specifying the YOUR_CLIENT_SECRET, YOUR_CLIENT_ID, app_secret, app_id, data-clientid, appId
 
 LogAnalysis application connects to the database named "catalog". Before any use of the application the database server
 must exist, server must have the database named "catalog", and database must contain the data
