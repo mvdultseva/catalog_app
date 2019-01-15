@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="{{url_for('show_catalog')}}">Catalog App</a>
+        <form class="form-inline">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    {%if 'username' not in session %}
+                        <a class="btn btn-outline-success" href="{{url_for('show_login')}}" role="button">Login</a>
+                    {% else %}
+                        <a class="btn btn-outline-success" href="{{url_for('new_item')}}" role="button">Add Item</a>
+
+                        <a class="btn btn-outline-success" href="{{url_for('gdisconnect')}}" role="button">Logout</a>
+                    {% endif %}
+                </form>
+            </nav>
+        </form>
+</nav>
+
+

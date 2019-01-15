@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Categories</h1>
+		{% for category in categories %}
+			<a href = "{{url_for('show_items', category_id = category.id)}}">
+				<h4>{{category.name}}</h4>
+			</a>
+		{% endfor %}
+    </div>
+    <div class="col-6">
+      <h1>Latest Items</h1>
+		{% for item in items %}
+			<a href = "{{url_for('show_item', item_id = item.id, category_id = item.category_id)}}">
+				<h4>{{item.name}}
+				<noindex> <a href = "{{url_for('show_items', category_id = item.category_id)}}" class="text-secondary">
+					({{item.category.name}})</a>
+				</noindex>
+				</h4>
+			</a>
+		{% endfor %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+            <h2 class="text-center">You are not authorized to edit or delete item.</h2>
+            <a class="btn btn-primary btn-lg"
+               href="{{url_for('show_item', item_id=item.id, category_id=item.category_id)}}" role="button">Back</a>
+    </div>
+</div>
+{% endblock %}
